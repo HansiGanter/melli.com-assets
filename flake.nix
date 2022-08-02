@@ -11,6 +11,7 @@
       system: with nixpkgs.legacyPackages.${system};
       {
         devShell = mkShell {
+          nativeBuildInputs = [ bashInteractive ];
           buildInputs = [
             gnumake
             libwebp
