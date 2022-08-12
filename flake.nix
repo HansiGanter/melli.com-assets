@@ -13,8 +13,8 @@
         devShell = mkShell {
           nativeBuildInputs = [ bashInteractive ];
           buildInputs = [
-            gnumake
             libwebp
+            (python39.withPackages (p: with p; [ doit black ]))
           ];
         };
       }
