@@ -1,38 +1,29 @@
-from itertools import chain
 from pathlib import Path
 
 base = Path(__file__).parent
 public = base / "public"
 
 
-def task_team_photos():
-    "Compresss team photos into webp format"
+def task_webp():
+    "Compresss images into webp format"
 
-    photos = (base / "team").rglob("*.jpg")
-    for photo in photos:
-        target = public / photo.relative_to(base).with_suffix(".webp")
+    images = (base / "images").rglob("*.*")
+
+    for image in filter(lambda image: image.suffix in ".jpg.png.webp", images):
+        target = public / image.relative_to(base).with_suffix(".webp")
         target.parent.mkdir(parents=True, exist_ok=True)
 
-        yield {
-            "name": photo,
-            "actions": [f"cwebp -resize 0 512 -o {target} {photo}"],
-            "targets": [target],
-            "file_dep": [photo],
-        }
-
-
-def task_stock():
-    "Compresss stock photos into webp format"
-
-    stock = (base / "stock").rglob("*.jpg")
-    jobs = (base / "jobs").rglob("*.jpg")
-    for photo in chain(stock, jobs):
-        target = public / photo.relative_to(base).with_suffix(".webp")
-        target.parent.mkdir(parents=True, exist_ok=True)
+        parts = target.relative_to(base).parts
+        if "team" in parts:
+            width = 512
+        elif "stock" in parts:
+            width = 1024
+        else:
+            width = 512
 
         yield {
-            "name": photo,
-            "actions": [f"cwebp -resize 0 1024 -o {target} {photo}"],
+            "name": image,
+            "actions": [f"cwebp -resize 0 {width} -o {target} {image}"],
             "targets": [target],
-            "file_dep": [photo],
+            "file_dep": [image],
         }

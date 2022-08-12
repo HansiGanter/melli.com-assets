@@ -1,5 +1,5 @@
 {
-  description = "Emilia Assets";
+  description = "Assets";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
