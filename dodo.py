@@ -18,6 +18,8 @@ def task_webp():
             width = 512
         elif "stock" in parts:
             width = 1024
+        elif "backgrounds" in parts:
+            width = 1024
         else:
             width = 512
 
