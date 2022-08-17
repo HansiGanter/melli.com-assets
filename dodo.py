@@ -9,7 +9,7 @@ def task_webp():
 
     images = (base / "images").rglob("*.*")
 
-    for image in filter(lambda image: image.suffix in ".jpg.png.webp", images):
+    for image in filter(lambda image: image.suffix in ".jpg.jpeg.png.webp", images):
         target = public / image.relative_to(base).with_suffix(".webp")
         target.parent.mkdir(parents=True, exist_ok=True)
 
