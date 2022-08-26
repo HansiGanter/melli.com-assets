@@ -1,6 +1,8 @@
 from pathlib import Path
 
-base = Path(__file__).parent
+import imagesize
+
+base = Path(__file__).relative_to(Path.cwd()).parent
 public = base / "public"
 
 
@@ -13,19 +15,21 @@ def task_webp():
         target = public / image.relative_to(base).with_suffix(".webp")
         target.parent.mkdir(parents=True, exist_ok=True)
 
-        parts = target.relative_to(base).parts
-        if "team" in parts:
-            width = 512
-        elif "stock" in parts:
-            width = 1024
-        elif "backgrounds" in parts:
-            width = 1024
-        else:
-            width = 512
-
+        # we create a 512px version of every image
         yield {
-            "name": image,
-            "actions": [f"cwebp -resize 0 {width} -o {target} {image}"],
+            "name": target,
+            "actions": [f"cwebp -resize 512 0 -o {target} {image}"],
             "targets": [target],
             "file_dep": [image],
         }
+
+        # for images greater than 512px we also create a 1024px version
+        source_width, _ = imagesize.get(image)
+        if source_width > 512:
+            target_1024 = target.with_stem(target.stem + "-1024")
+            yield {
+                "name": target_1024,
+                "actions": [f"cwebp -resize 1024 0 -o {target_1024} {image}"],
+                "targets": [target_1024],
+                "file_dep": [image],
+            }

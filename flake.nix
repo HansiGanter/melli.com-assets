@@ -14,7 +14,7 @@
           nativeBuildInputs = [ bashInteractive ];
           buildInputs = [
             libwebp
-            (python39.withPackages (p: with p; [ doit black ]))
+            (python39.withPackages (p: with p; [ doit imagesize black ]))
           ];
         };
       }

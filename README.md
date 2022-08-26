@@ -2,22 +2,19 @@
 
 ## Workflow
 
-* Every file in the `public` folder will be deployed under `https://assets.melli.com` when a commit is pushed to [GitHub's `main` branch](https://gitlab.com/mit-emilia/assets).
+* Every file in the `public` folder will be deployed under `https://assets.melli.com` when a commit is pushed to [GitHub's `main` branch](https://github.com/melli-labs/assets).
 * If you're viewing this folder from internal cloud `OCA/meetap/assets` and don't know/care what a Git commit is, then just add your file and ask one of our developers to handle the rest.
 
 ## Folder Overview
 
-Some files require a build step to improve the loading performance. For example, our team photos stored at `/team` are about 1 MB in size. We compress them to 512x512 WebP files which are approximately 15 kB. Files that don't require a build step are directly stored in the `/public` folder.
+All files in `/images` will be compressed in to WebP to improve performance. We compress them to a resolution of 512x?? WebP files which are approximately 15 kB. Images which are larger than 512px will also be compressed into 1024x?? and prefixed with `...-1024.webp`.
+
+Files that don't require a build step are directly stored in the `/public` folder.
 
 | Folder                  | Build Step              | Description                     |
 | :---------------------- | :---------------------- | ------------------------------- |
-| `/stock`                | compressed to 1024 WebP | Stock photos for website        |
-| `/jobs`                 | compressed to 1024 WebP | Stock photos for job posting    |
-| `/team`                 | compressed to 512 WebP  | Photos of our team              |
-| `/public/<filename>`    | none                    | e.g. favicon.svg or logo.svg    |
-| `/public/shapes`        | none                    | masks for images                |
-| `/public/icons`         | none                    | e.g. placeholder avatar         |
-| `/public/illustrations` | none                    | Illustrations                   |
+| `/public`               | none                    | Will be deployed                |
+| `/images`               | compressed to WebP      | Original images                 |
 
 ## Build Instructions
 
@@ -25,8 +22,9 @@ Some files require a build step to improve the loading performance. For example,
 
 The `flake.nix` provides a development environment with:
 
-* `GNU make`
 * `cwebp`
+* `doit` - A Python task runner
+* `Python + deps`
 
 Activate development environment:
 
@@ -41,17 +39,13 @@ direnv allow
 Run all build steps:
 
 ```sh
-make
+doit
 ```
 
 Run a specific build step:
 
 ```sh
-make public/team
-```
-
-Or, run for a single file:
-
-```sh
-make public/team/hans-ganter.webp
+doit run -s webp:public/images/team/benjamin-mollier.webp
+# or
+doit run -s webp:public/images/team/benjamin-mollier-1024.webp
 ```
