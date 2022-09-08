@@ -23,13 +23,14 @@ def task_webp():
             "file_dep": [image],
         }
 
-        # for images greater than 512px we also create a 1024px version
-        source_width, _ = imagesize.get(image)
-        if source_width > 512:
-            target_1024 = target.with_stem(target.stem + "-1024")
-            yield {
-                "name": target_1024,
-                "actions": [f"cwebp -resize 1024 0 -o {target_1024} {image}"],
-                "targets": [target_1024],
-                "file_dep": [image],
-            }
+        # for images greater than 512px we also create a 1024px/1536px version
+        for width in 1024, 1536, 2048:
+            source_width, _ = imagesize.get(image)
+            if source_width > width:
+                target_lg = target.with_stem(target.stem + f"-{width}")
+                yield {
+                    "name": target_lg,
+                    "actions": [f"cwebp -resize {width} 0 -o {target_lg} {image}"],
+                    "targets": [target_lg],
+                    "file_dep": [image],
+                }
