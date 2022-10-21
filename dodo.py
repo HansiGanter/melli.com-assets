@@ -10,6 +10,7 @@ def task_webp():
     "Compresss images into webp format"
 
     images = (base / "images").rglob("*.*")
+    # print(list(images))
 
     for image in filter(lambda image: image.suffix in ".jpg.jpeg.png.webp", images):
         target = public / image.relative_to(base).with_suffix(".webp")
@@ -18,7 +19,7 @@ def task_webp():
         # we create a 512px version of every image
         yield {
             "name": target,
-            "actions": [f"cwebp -resize 512 0 -o {target} {image}"],
+            "actions": [f"cwebp -resize 512 0 -o '{target}' '{image}'"],
             "targets": [target],
             "file_dep": [image],
         }
@@ -30,7 +31,7 @@ def task_webp():
                 target_lg = target.with_stem(target.stem + f"-{width}")
                 yield {
                     "name": target_lg,
-                    "actions": [f"cwebp -resize {width} 0 -o {target_lg} {image}"],
+                    "actions": [f"cwebp -resize {width} 0 -o '{target_lg}' '{image}'"],
                     "targets": [target_lg],
                     "file_dep": [image],
                 }
