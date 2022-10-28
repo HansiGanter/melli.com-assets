@@ -1,19 +1,44 @@
 <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M79.2681 86.7424C64.4915 91.3205 59.1262 82.5713 44.3495 73.822C18.1384 58.3024 -4.99373 57.1372 2.3945 34.7554C7.18247 20.2507 17.9627 20.9193 39.424 17.1551C60.8853 13.3909 62.2046 5.96415 73.551 10.3388C84.8973 14.7134 79.2681 25.0905 90.6144 44.2168C101.961 63.3432 94.0447 82.1643 79.2681 86.7424Z" fill="#A7F3D0"/>
-<path d="M62 80C63.8 77.88 67.76 76 71 76C74.24 76 78.2 77.88 80 80" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M71 90C81.4934 90 90 81.4934 90 71C90 60.5066 81.4934 52 71 52C60.5066 52 52 60.5066 52 71C52 81.4934 60.5066 90 71 90Z" stroke="black" stroke-width="3" stroke-miterlimit="10"/>
-<path d="M82 66C82 68.28 80.28 70 78 70C75.72 70 74 68.28 74 66.04" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M68 66C68 68.28 66.28 70 64 70C61.72 70 60 68.28 60 66" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M25 90C35.4934 90 44 81.4934 44 71C44 60.5066 35.4934 52 25 52C14.5066 52 6 60.5066 6 71C6 81.4934 14.5066 90 25 90Z" stroke="black" stroke-width="3" stroke-miterlimit="10"/>
-<path d="M16 76L26 82" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M31 70C32.6569 70 34 68.6569 34 67C34 65.3431 32.6569 64 31 64C29.3431 64 28 65.3431 28 67C28 68.6569 29.3431 70 31 70Z" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M19 70C20.6569 70 22 68.6569 22 67C22 65.3431 20.6569 64 19 64C17.3431 64 16 65.3431 16 67C16 68.6569 17.3431 70 19 70Z" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M25 44C35.4934 44 44 35.4934 44 25C44 14.5066 35.4934 6 25 6C14.5066 6 6 14.5066 6 25C6 35.4934 14.5066 44 25 44Z" stroke="black" stroke-width="3" stroke-miterlimit="10"/>
-<path d="M28 22C28 19.72 29.72 18 32 18C34.28 18 36 19.72 36 22" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M14 22C14 19.72 15.72 18 18 18C20.28 18 22 19.72 22 22" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M14 30C14.96 32.32 18.72 36 25 36C31.28 36 35.04 32.32 36 30" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M62 32C62 32 66.48 34 71 34C75.52 34 80 32 80 32" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M71 44C81.4934 44 90 35.4934 90 25C90 14.5066 81.4934 6 71 6C60.5066 6 52 14.5066 52 25C52 35.4934 60.5066 44 71 44Z" stroke="black" stroke-width="3" stroke-miterlimit="10"/>
-<path d="M77 24C78.6569 24 80 22.6569 80 21C80 19.3431 78.6569 18 77 18C75.3431 18 74 19.3431 74 21C74 22.6569 75.3431 24 77 24Z" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M65 24C66.6569 24 68 22.6569 68 21C68 19.3431 66.6569 18 65 18C63.3431 18 62 19.3431 62 21C62 22.6569 63.3431 24 65 24Z" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path
+        d="M79.2681 86.7424C64.4915 91.3205 59.1262 82.5713 44.3495 73.822C18.1384 58.3024 -4.99373 57.1372 2.3945 34.7554C7.18247 20.2507 17.9627 20.9193 39.424 17.1551C60.8853 13.3909 62.2046 5.96415 73.551 10.3388C84.8973 14.7134 79.2681 25.0905 90.6144 44.2168C101.961 63.3432 94.0447 82.1643 79.2681 86.7424Z"
+        fill="#A7F3D0" />
+    <path d="M62 80C63.8 77.88 67.76 76 71 76C74.24 76 78.2 77.88 80 80" stroke="#2F363D" stroke-width="3"
+        stroke-miterlimit="10" stroke-linecap="round" />
+    <path
+        d="M71 90C81.4934 90 90 81.4934 90 71C90 60.5066 81.4934 52 71 52C60.5066 52 52 60.5066 52 71C52 81.4934 60.5066 90 71 90Z"
+        stroke="#2F363D" stroke-width="3" stroke-miterlimit="10" />
+    <path d="M82 66C82 68.28 80.28 70 78 70C75.72 70 74 68.28 74 66.04" stroke="#2F363D" stroke-width="3"
+        stroke-miterlimit="10" stroke-linecap="round" />
+    <path d="M68 66C68 68.28 66.28 70 64 70C61.72 70 60 68.28 60 66" stroke="#2F363D" stroke-width="3"
+        stroke-miterlimit="10" stroke-linecap="round" />
+    <path
+        d="M25 90C35.4934 90 44 81.4934 44 71C44 60.5066 35.4934 52 25 52C14.5066 52 6 60.5066 6 71C6 81.4934 14.5066 90 25 90Z"
+        stroke="#2F363D" stroke-width="3" stroke-miterlimit="10" />
+    <path d="M16 76L26 82" stroke="#2F363D" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" />
+    <path
+        d="M31 70C32.6569 70 34 68.6569 34 67C34 65.3431 32.6569 64 31 64C29.3431 64 28 65.3431 28 67C28 68.6569 29.3431 70 31 70Z"
+        stroke="#2F363D" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" />
+    <path
+        d="M19 70C20.6569 70 22 68.6569 22 67C22 65.3431 20.6569 64 19 64C17.3431 64 16 65.3431 16 67C16 68.6569 17.3431 70 19 70Z"
+        stroke="#2F363D" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" />
+    <path
+        d="M25 44C35.4934 44 44 35.4934 44 25C44 14.5066 35.4934 6 25 6C14.5066 6 6 14.5066 6 25C6 35.4934 14.5066 44 25 44Z"
+        stroke="#2F363D" stroke-width="3" stroke-miterlimit="10" />
+    <path d="M28 22C28 19.72 29.72 18 32 18C34.28 18 36 19.72 36 22" stroke="#2F363D" stroke-width="3"
+        stroke-miterlimit="10" stroke-linecap="round" />
+    <path d="M14 22C14 19.72 15.72 18 18 18C20.28 18 22 19.72 22 22" stroke="#2F363D" stroke-width="3"
+        stroke-miterlimit="10" stroke-linecap="round" />
+    <path d="M14 30C14.96 32.32 18.72 36 25 36C31.28 36 35.04 32.32 36 30" stroke="#2F363D" stroke-width="3"
+        stroke-miterlimit="10" stroke-linecap="round" />
+    <path d="M62 32C62 32 66.48 34 71 34C75.52 34 80 32 80 32" stroke="#2F363D" stroke-width="3" stroke-miterlimit="10"
+        stroke-linecap="round" />
+    <path
+        d="M71 44C81.4934 44 90 35.4934 90 25C90 14.5066 81.4934 6 71 6C60.5066 6 52 14.5066 52 25C52 35.4934 60.5066 44 71 44Z"
+        stroke="#2F363D" stroke-width="3" stroke-miterlimit="10" />
+    <path
+        d="M77 24C78.6569 24 80 22.6569 80 21C80 19.3431 78.6569 18 77 18C75.3431 18 74 19.3431 74 21C74 22.6569 75.3431 24 77 24Z"
+        stroke="#2F363D" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" />
+    <path
+        d="M65 24C66.6569 24 68 22.6569 68 21C68 19.3431 66.6569 18 65 18C63.3431 18 62 19.3431 62 21C62 22.6569 63.3431 24 65 24Z"
+        stroke="#2F363D" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" />
 </svg>
