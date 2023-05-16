@@ -7,12 +7,12 @@ public = base / "public"
 
 
 def task_webp():
-    "Compresss images into webp format"
+    """Compresss images into webp format"""
 
     images = (base / "images").rglob("*.*")
     # print(list(images))
 
-    for image in filter(lambda image: image.suffix in ".jpg.jpeg.png.webp", images):
+    for image in filter(lambda image: image.suffix in [".jpg",".jpeg",".png",".webp"], images):
         target = public / image.relative_to(base).with_suffix(".webp")
         target.parent.mkdir(parents=True, exist_ok=True)
 
