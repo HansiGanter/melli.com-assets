@@ -25,7 +25,7 @@ def task_webp():
         }
 
         # for images greater than 512px we also create a 1024px/1536px version
-        for width in 1024, 1536, 2048:
+        for width in 768, 1024, 1536, 2048:
             source_width, _ = imagesize.get(image)
             if source_width > width:
                 target_lg = target.with_stem(target.stem + f"-{width}")
