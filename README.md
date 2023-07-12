@@ -1,9 +1,23 @@
 # Assets
 
+::: error
+To the engineers: DO NOT PUT ANY SECRETS INTO THIS FOLDER. This repository is mirrored to Nextcloud. Even if a file is git-ignored, it still will be synced to Nextcloud.
+
+:::
+
+::: info
+To normal people: This folder is synced with our GitHub. Put the high-quality image files into the `images` folder. Then tell a engineer to create the compressed versions and push them to our CDN.
+
+:::
+
+## TODO
+
+* Fix the `images/images` duplication and add the `hansi`-redirect:
+  Make `assets.melli.com/images/images` point to `assets.melli.com/images`
+
 ## Workflow
 
 * Every file in the `public` folder will be deployed under `https://assets.melli.com` when a commit is pushed to [GitHub's `main` branch](https://github.com/melli-labs/assets).
-* If you're viewing this folder from internal cloud `OCA/meetap/assets` and don't know/care what a Git commit is, then just add your file and ask one of our developers to handle the rest.
 
 ## Folder Overview
 
