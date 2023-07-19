@@ -12,12 +12,11 @@ To normal people: This folder is synced with our GitHub. Put the high-quality im
 
 ## TODO
 
-* Fix the `images/images` duplication and add the `hansi`-redirect:
-  Make `assets.melli.com/images/images` point to `assets.melli.com/images`
+* Fix the `images/images` duplication and add the `hansi`\-redirect: Make `assets.melli.com/images/images` point to `assets.melli.com/images`
 
 ## Workflow
 
-* Every file in the `public` folder will be deployed under `https://assets.melli.com` when a commit is pushed to [GitHub's `main` branch](https://github.com/melli-labs/assets).
+* Every file in the `public` folder will be deployed under `https://assets.melli.com` when a commit is pushed to [GitHub's ](https://github.com/melli-labs/assets)`main` branch.
 
 ## Folder Overview
 
@@ -25,10 +24,10 @@ All files in `/images` will be compressed in to WebP to improve performance. We 
 
 Files that don't require a build step are directly stored in the `/public` folder.
 
-| Folder                  | Build Step              | Description                     |
-| :---------------------- | :---------------------- | ------------------------------- |
-| `/public`               | none                    | Will be deployed                |
-| `/images`               | compressed to WebP      | Original images                 |
+| Folder | Build Step | Description |
+|:-------|:-----------|-------------|
+| `/public` | none | Will be deployed |
+| `/images` | compressed to WebP | Original images |
 
 ## Build Instructions
 
